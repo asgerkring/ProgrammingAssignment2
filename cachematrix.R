@@ -2,8 +2,12 @@
 ## functions do
 
 ## Write a short comment describing this function
-## This function makes a cached version of a matrix. A matrix will
-## have to be provided for input.
+## This function basically has 4 "methods". You can either
+## 1) call the "set" method and provide a new matrix as input
+## 2) calling the "get" method will retrieve the matrix, or return NA
+## 3) setinverse will store the result of the inverse of the matrix
+## 4) getinverse will retrieve the inverse matrix
+
 makeCacheMatrix <- function(x = matrix()) {
 
         invMat <- NULL  ## Reset  invMat
@@ -26,6 +30,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+## This function will return the inverse of a matrix, provided
+## an non-singular matrix. If result is stored in x, then
+## the result will not be calculated. If it is not stored, then
+## it will be calculated and stored in x.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
